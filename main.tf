@@ -1,4 +1,10 @@
 terraform {
+  backend "remote" {
+    organization = "chaedie"
+    workspaces {
+      name = "Example-Workspace"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -10,7 +16,7 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "ap-northeast-2"
 }
 
 resource "aws_instance" "app_server" {

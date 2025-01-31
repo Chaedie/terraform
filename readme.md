@@ -21,4 +21,5 @@ terraform destroy
 
 terraform output
 
+terraform login
 ```
