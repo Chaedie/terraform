@@ -11,10 +11,3 @@ terraform {
     dynamodb_table="state-locking"
   }
 }
-
-resource "aws_s3_bucket" "finance" {
-  bucket = "chaedie-finance-250202"
-  tags = {
-    Description = "Finance and Payroll"
-  }
-}
